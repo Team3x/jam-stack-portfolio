@@ -3,7 +3,7 @@ h1{
 }
 
 #signupForm {
-      background-image:url(https://zellox.com/wp-content/uploads/2016/02/background-site.jpg);
+      background:rgba(222, 244, 223, .5);
       border-radius:  25px;
       width:auto;
       height:auto;
@@ -11,26 +11,66 @@ h1{
 }
 
 #loginForm {
-      background-image:url(https://zellox.com/wp-content/uploads/2016/02/background-site.jpg);
+      background:rgba(222, 244, 223, .5);
       border-radius:  25px;
       width:auto;
       height:auto;
       padding:1em;
 }
 
+#top {
+    background-image: url(https://static.pexels.com/photos/25521/pexels-photo-25521.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    border-radius: 15px;
+    z-index: 1;
+}
+
+#middle {
+    background-image:url(https://static.pexels.com/photos/286076/pexels-photo-286076.jpeg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    border-radius: 25px;
+    margin-bottom: 1em;
+}
+
+#aboutSection {
+  margin: 2em 2em;
+  background: rgba(222, 244, 223, .5);
+  border-radius: 15px;
+  padding: 2em;
+}
+
+#bottom {
+    background-image: url(http://2.bp.blogspot.com/-bj1_grGf7_Q/Uj73xuJ7iaI/AAAAAAAAF2c/HGqX5aUOVjQ/s1600/bg.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    border-radius: 15px;
+    padding: 2em;
+    z-index: 1;
+}
+
+body#main {
+  background-image:url(https://zellox.com/wp-content/uploads/2016/02/background-site.jpg);
+}
+
 body {
     font-family: "Lato", sans-serif;
     transition: background-color .5s;
-    background-image:url(https://zellox.com/wp-content/uploads/2016/02/background-site.jpg);
 }
 
 #jt {
   border-radius: 25px;
   margin:1em;
+  background:rgba(209, 255, 246,.5);
 }
 
 #socialCenter span {
   float:center;
+  color: white;
+}
+  #socialCenter {
+  color: white;
 }
 
 .team {
@@ -42,6 +82,23 @@ body {
 }
 
 /*NAV BAR*/
+span#menuBar {
+    z-index: 2;
+    position: fixed;
+    font-size:30px;
+    cursor:pointer;
+    text-align: center;
+    color: white;
+    width:40px;
+    background:rgba(39, 39, 40, .3);
+    border-radius: 15px;
+    left:0;
+    margin-left: 5px;
+}
+
+#mySidenav {
+  position:fixed;
+}
 .sidenav {
     height: 100%;
     width: 0;
@@ -86,3 +143,37 @@ body {
   .sidenav a {font-size: 18px;}
 }
 /*NAV BAR*/
+
+#up{
+  right:0;
+  bottom:0;
+  margin-right: 10px;
+  margin-bottom:5px;
+  background:rgba(39, 39, 40, .3);
+  border-radius: 15px;
+  cursor:pointer;
+  text-align: center;
+  color: white;
+  width:40px;
+  position:fixed;
+  z-index:2;
+}
+
+i.fa.fa-arrow-up {
+  color:white;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin:auto;
+}
+
+.hacker {
+  margin:2em;
+}
+
+#team {
+  text-align: center;
+}
