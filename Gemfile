@@ -7,7 +7,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 #cx added gems
-gem 'bootstrap-will_paginate'
+  gem 'bootstrap-will_paginate'
 gem 'bootstrap-sass'
 gem 'sass-rails', '~> 5.0'
 gem 'will_paginate'
