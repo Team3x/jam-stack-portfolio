@@ -7,9 +7,11 @@
 
 <!--********TO-DO**********
 -Fix confirm password issue.
--2nd Picture Carousel Next/Last Buttons not working.
--2nd Picture Carousel moves page slightly per picture.
 -->
+
+<!--Script-->
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/jqscript.js"></script>
 
 <!--CSS-->
 <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -20,25 +22,38 @@
 <!-- Bootstrap -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
+<!--Google Fonts-->
+<link href="https://fonts.googleapis.com/css?family=Anton|Black+Ops+One|Bungee+Shade|Yanone+Kaffeesatz" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:400,900,900i" rel="stylesheet">
+<!--
+font-family: 'Anton', sans-serif;
+font-family: 'Yanone Kaffeesatz', sans-serif;
+font-family: 'Bungee Shade', serif;
+font-family: 'Black Ops One', serif;
+font-family: 'Raleway', sans-serif;
+-->
+
 </head>
 
-<body id="main">
 
-<div class="container-fluid"> 
+
+
+<body id="menu">
+
 
 <!--Side Menu Bar-->
 <div class="menu">
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#main">Home</a>
-  <a href="#loginForm">Login</a>
-  <a href="#signupForm">Sign Up</a>
-  <a href="#services">Services</a>
-  <a href="#mission">Mission</a>
-  <a href="#team">Team</a>
-   <a href="#about">About</a>
-  <a href="#contact">Contact</a>
-  <a href="#main">Back to the Top</a>
+  <a href="#" onclick="closeNav()">Home</a>
+  <a href="#loginForm" onclick="closeNav()">Login</a>
+  <a href="#signupForm" onclick="closeNav()">Sign Up</a>
+  <a href="#services" onclick="closeNav()">Services</a>
+  <a href="#team" onclick="closeNav()">Team</a>
+  <a href="#extras" onclick="closeNav()">Extras</a>
+  <a href="#about" onclick="closeNav()">About</a>
+  <a href="#contact" onclick="closeNav()">Contact</a>
+  <a href="#top" onclick="closeNav()">Back to the Top</a>
 </div>
 
   <span id="menuBar" onclick="openNav()">&#9776; <strong><u id="menuBar"></u></strong></span>
@@ -47,45 +62,84 @@
 
 <!--Back to Top Button-->
 <div id="up">
-  <a href="#main">
+  <a href="#top">
     <i class="fa fa-arrow-up fa-3x" aria-hidden="true"></i>
   </a>
 </div>
 <!--End Back to Top Button-->
 
-<div id="top">
-<div class="container">
-  <div class="row">
-    <div class="col-lg-12">
-      <div class="jumbotron" id="jt">
-        <h1 class="text-center"><strong><em>Team <u>3X</u> Design</em></strong></h1>
-        <div class="row">
-          <div class="col-lg-2 col-lg-offset-4 col-md-offset-4 col-md-2 col-sm-offset-3 col-sm-3 col-xs-offset-3 col-xs-3">
-        </div>
-        <p class="text-center">Welcome to the <strong><em>Team 3X</em></strong> <u>Jam Stack Portfolio Page</u> where we showcase a large amount of skills and qualities we have incorporated as a 3 man team. We hope you enjoy this page and find it interesting.</p>
 
-       <!--Login--> 
-        
-        <hr>
-        <form id="loginForm">
-        <h2><u>Login!</u></h2>
-        <br>
-         <label for="username">Username: </label>
-          <input id="username" type="text" placeholder="Username" required>
-          <br>
-          <br>
-          <label for="password">Password: </label>
-          <input id="password" type="password" placeholder="Password" required>
-          <br>
-          <br>
-          <input type="submit">
-        </form>
-        <!--End Login-->
 
-<hr>
 
-        <!--Carousel--> 
-<div class="container">
+
+
+
+<!--Header-->
+
+  <header id="top" class="header">
+    <div class="text-vertical-center">
+    <div id="main">
+      <h1 class="text-center" style="font-family: 'Bungee Shade', serif;"><strong><em>Team <u>3X</u> Design</em></strong></h1>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <a style="font-size:18px"; href="#loginForm" id="justLogMeIn" class="btn btn-dark btn-lg">Just log me in!</a>
+      </div>
+    </header>
+
+<!--/Header-->
+
+
+<!--Description-->
+<div id="description" class="container-fluid">
+<div id="d1">
+<h3 style="font-family: 'Yanone Kaffeesatz', sans-serif;" class="text-center "><em>Welcome to the <strong><em>Team 3X</em></strong> <u>Jam Stack Portfolio Page</u> where we showcase a large amount of skills and qualities we have incorporated as a 3 man team. We hope you enjoy this page and find it interesting.</em></h3>
+</div>
+
+ <div id="d2">
+<h3 id="d2" style="font-family: 'Yanone Kaffeesatz', sans-serif;" class="text-center "><em>Feel free to contact us if you are interested in joining our development team. Also feel free to contact us if you found this page interesting. The link is at the bottom which can be reached via the side menu bar. Thanks!</em></h3>
+</div>
+
+</div>
+
+<!--/Description-->
+
+
+<!--Login--> 
+
+<div class="text-center bg-primary login">
+  <form id="loginForm">
+    <h2 class="text-center"><strong><u><em>LOG IN!</em></u></strong></h2>
+   
+  <p>
+    <label for="username">Username: </label>
+      <input id="account_username" type="text" placeholder="Username" required>
+  </p>
+
+  <p>
+    <label for="password">Password: </label>
+      <input id="account_password" type="password" placeholder="Password" required>
+  </p>
+      
+      <br>              
+    <button type="submit" class="btn btn-default" style="color:black;">Submit</button>
+   
+  </form>
+
+  <h3><em><a href="#signUpNow" id="signUpNow" class="btn btn-dark btn-lg">OR SIGN UP NOW!</a></em></h3>
+    <br>
+  <h4>Its quick, easy, and free! Get access to tons of cool features!</h4>
+</div>
+<!--End Login-->
+
+
+<!--Carousel--> 
+
+<div id="carousel_1_wrapper">
+<div class="container carousel_1">
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -98,7 +152,7 @@
     <div class="carousel-inner">
 
       <div class="item active">
-        <img src="https://warroom.securestate.com/wp-content/uploads/2016/10/coding.jpg" alt="" style="width:100%;">
+        <img src="images/coding.jpg" alt="" style="width:100%;"> 
         <div class="carousel-caption">
           <h3></h3>
           <p></p>
@@ -106,7 +160,7 @@
       </div>
 
       <div class="item">
-        <img src="https://www.teachermagazine.com.au/files/Computing%2C_programming_and_coding_in_schools.jpg" alt="" style="width:100%; ">
+        <img src="images/code.jpg" alt="" style="width:100%; ">
         <div class="carousel-caption">
           <h3></h3>
           <p></p>
@@ -114,14 +168,12 @@
       </div>
     
       <div class="item">
-        <img src="http://www.aprameya.net/images/darkbluematrix.jpg" alt="" style="width:100%;">
+        <img src="images/darkbluematrix.jpg" alt="" style="width:100%;">
         <div class="carousel-caption">
           <h3></h3>
           <p></p>
         </div>
       </div>
-  
-    </div>
 
     <!-- Left and right controls -->
     <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -133,40 +185,52 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
+ </div>
 </div>
+</div>
+
 <!--End Carousel-->
 
 
-        <!--Sign Up-->
-        <hr>
-        <form id="signupForm">
-        <h2><u>Sign up!</u></h2>
-        <br>
-        <label for="firstName">First Name: </label>
+<!--Sign Up-->
+<div class= "text-center">
+      <form id="signupForm" class="bg-info">
+
+<h2 class="text-center"><strong><u><em>SIGN UP!</em></u></strong></h2>
+ <label for="firstName">First Name: 
         <input id="firstName" name="firstName" type="text" placeholder="First Name" required>
-        <label for="lastName">Last Name: </label>
+        </label>
+        <label for="lastName">Last Name:
         <input id="lastName" name="lastName" type="text" placeholder="Last Name" required>
-        <br/>
-        <label for="male">Male </label>
+        </label>
+      <br>
+        <label for="male">Male 
         <input id="male" name="gender" type="radio" name="choice" value="male">
-        <label for="female">Female </label>
+        </label>
+        <label for="female">Female 
         <input id="female" name="gender" type="radio" name="choice" value="female">
-        <label for="other">Other </label>
+        </label>
+        <label for="other">Other 
         <input id="other" name="gender" type="radio" name="choice" value="other">
-        <br/>
-        <label for="email">Email: </label>
+        </label>
+      <br>
+   <label for="email">Email: 
         <input name="email" id="email" type="email" placeholder="Your Email" required>
+        </label>
         <br>
-        <label for="password">Password: </label>
-        <input name="password" id="password" type="password" placeholder="Password" minlength="5" required>
-        
-        <label for="confirm_password">Confirm Password: </label>
-        <input name="confirm_password" id="confirm_password" type="password" placeholder="Confirm Password" minlength="5" required>
+<!--Password-->
+<!--//CONFIRMATION FEATURE NOT WORKING-ALWAYS SAYS PASSWORDS DONT MATCH EVEN WHEN JS LOGIC IS REVERSED//-->
+    <label for="password">Password: 
+        <input name="password" id="password" type="password" placeholder="Password" minlength="3" required>
+        </label>
+        <label for="confirm_password">Confirm: 
+        <input name="confirm_password" id="confirm_password" type="password" placeholder="Confirm Password" minlength="3" required>
+        </label>
+<!--/Password-->
 
-
-        <br/>
+<br>
         <label>Birthday:
-            <select name="month">
+            <select name="month" style="color:black">
             <option name="">Month</option>
             <option name="1">1</option>
             <option name="2">2</option>
@@ -182,7 +246,7 @@
             <option name="12">12</option>
           </select>
 
-          <select name="day">
+          <select name="day" style="color:black">
             <option name="">Day</option>
             <option name=1>1</option>
             <option name=2>2</option>
@@ -217,7 +281,7 @@
             <option name=31>31</option>
           </select>
 
-          <select name="year">
+          <select name="year" style="color:black">
             <option name=year>Year</option>
             <option name=2000>2000</option>
             <option name=1999>1999</option>
@@ -274,262 +338,302 @@
 
  </label>
 
-<br/>
+<br>
+
 <label for="agree">I agree to the terms and conditions</label>
-<input name="agree" id="agree" type="checkbox" required>
-<br/>
-<input type="submit">
+  <input name="agree" id="agree" type="checkbox" required>
 
-        </form>
+<br>
+<br>
+<!--Submit-->
+ <button id="signupSubmit" type="submit" class="btn btn-default" style="color:black;">Submit</button>
+
+</form>
+</div>
+
         <!--End Sign Up-->
-        <br>
-        <br>
-        <br>
-</div>
-</div>
-</div>
 
 
+<!--Services-->
 
-       </div>
-    </div>
-  </div>
-</div>
-<div class="container">
-  <div class="row">
-    <div class="col-sm-6">
-      <h3 id="services" class="text-center"><u>Services</u></h3>
-      <ul>
-        <li>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, magnam? Lorem ipsufm 
-        </li>
-        <li>
-        dolor sit amet, consectetur adipisicing elit. Cum, magnam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-        </li>
-        <li>
-        Cum, magnam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, error, itaque non vel architecto ratione obcaecati doloribus delectus illum harum? Lorem ipsum dolor sit amet, consectetur adipisicin Lorem ipsum 
-        </li>
-        <li>
-        dolor sit amet, consectetur adipisicing elit. Quasi, error, itaque non vel architecto ratione obcaecati doloribus delectus illum harum? Lorem ipsum dolor sit amet, consectetur adipisicin Lorem ipsum dolor sit amet, consectetur 
-        </li>
-        <li>
-        adipisicing elit. Quasi, error, itaque non vel architecto ratione obcaecati doloribus delectus illum harum? Lorem ipsum dolor sit amet, consectetur adipisicin
-        </li>
-      </ul>
-      <a class="btn btn-info btn-lg center-block" href="#" role="button">Learn More</a></div>
+<div class="container-fluid bg-warning" id="services" >
+  <h2 style="font-family: 'Bungee Shade', serif; font-size: 50px;" class="bg-info text-center">SERVICES</h2>
+  <div class="row-fluid">
+    
     <div class="text-center col-sm-6">
-      <h3 id="mission"><u>Mission</u></h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, magnam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, magnam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, magnam? Lorem ipsum um dolor sit amet, consectetur adipisicing elit. Quasi, error, itaque non vel architecto ratione obcaecati doloribus delectus illum harum? Lorem ipsum dolor sit amet, consectetur adipisicin Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qdolor sit amet, consectetur adipisicing elit. Quasi, error, itaque non vel architecto ratione obcaecati doloribus delectus illum harum? Lorem ipsum dolor sit etur adipisicin Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, error, itaque non vel architecto ratione obcaecati doloribus delectus illum harum? Lorem ipsum dolor sit amet, consectetur adipisicin Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, error, itaque non vel architecto ratione obcaecati doloribus delectus illum harum? Lorem ipsum dolor sit amet, consectetur adipisicin</p>
+      <h3 class="text-center bg-success"> 
+      <i class="fa fa-calendar fa-3x" aria-hidden="true"></i>
+      </h3>
       <a class="btn btn-info btn-lg center-block" href="#" role="button">Learn More</a></div>
-  </div>
-</div>
-<hr>
+      </div>
+       
+    <div class="text-center col-sm-6">
+      <h3 class="text-center bg-success">
+      <i class="fa fa-clock-o fa-3x" aria-hidden="true"></i>
+      </h3>
+      <a class="btn btn-info btn-lg center-block" href="#" role="button">Learn More</a></div>
 
-     <div class="mx-auto hacker"> 
+    <div class="text-center col-sm-6">
+      <h3 class="text-center bg-success">
+      <i class="fa fa-credit-card-alt fa-3x" aria-hidden="true"></i>
+      </h3>
+      <a class="btn btn-info btn-lg center-block" href="#" role="button">Learn More</a></div>
+
+    <div class="text-center col-sm-6">
+      <h3 class="text-center bg-success">
+      <i class="fa fa-envelope-open-o fa-3x" aria-hidden="true"></i>
+      </h3>
+      <a class="btn btn-info btn-lg center-block" href="#" role="button">Learn More</a></div>
+
+          <div class="text-center col-sm-6">
+      <h3 class="text-center bg-success">
+      <i class="fa fa-money fa-3x" aria-hidden="true"></i>
+      </h3>
+      <a class="btn btn-info btn-lg center-block" href="#" role="button">Learn More</a></div>
+
+          <div class="text-center col-sm-6">
+      <h3 class="text-center bg-success">
+      <i class="fa fa-rss-square fa-3x" aria-hidden="true"></i>
+      </h3>
+      <a class="btn btn-info btn-lg center-block" href="#" role="button">Learn More</a></div>
+
+      </div>
+  </div>
+
+<!--/Services-->
+
+
+<!--Hacker Picture--> 
+<div id="hackerBg">
+  <div class="mx-auto hacker"> 
          <div class="row">
-            <div class="col-lg-4 col-lg-offset-4">
-             <img src="http://i1-news.softpedia-static.com/images/news2/hackers-hacked-phone-hacking-company-511806-2.jpg">
+             <img id="hackerImg" src="images/hacker.jpg">
             </div>
          </div>
-     </div>
-      
-      <hr>
-<div class="container">
-  <div class="row">
+     </div> 
+     
+<!--/Hacker Picture--> 
+
+
+<!--Team--> 
+<div class="container-fluid bg-info" id="team">
     <div class="col-lg-12 col-md-12 col-sm-12">
-      <h2 id="team"><span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span> <u>The Team</u></h2>
+      <h2 style="font-family: 'Bungee Shade', serif; font-weight: bold;"><span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span> <u>The Team</u></h2>
+    </div>
 
+    <div class="col-lg-12 col-md-12 col-sm-12 team">
+      <h3 style="font-family: 'Bungee Shade', serif; font-weight: bold;"><span class="glyphicon glyphicon-screenshot" aria-hidden="true"></span> Charlie Brown</h3>
+        <p>Two years after high school our mom bought us our first Mac in 1995. I attempted to write my first HTML page and failed. 23 years later I’m developing web application software well beyond mywebpage.html. After graduating from college with an engineering degree I ventured into NYC and worked for some of the top recording studios. My web dreams weren’t as strong. But I had a tremendous background and knowledge of ripping computers apart and putting them back together even better. I used that skill a long time in many different IT positions. Landing an A+ cert doing tech support around the country. I chased a passion a for music but an even a deeper passion for the web. I got more technical and attained several positions implementing big data distributed systems as a Certified SAP Business Objects Architect in several software packages. I served Fortune 500 company's enterprise applications that sprung from canned solutions technology. After a small stint in the corporate world I decided to follow my dream and become a web developer. I went to a coding bootcamp, already having coded on my own for 1 year. I did the cohort for the polish. Know that I hope to put that polish on your project. I love Skyping with my daughter, a late night run; cooking to me is therapeutic, meditating, and hanging out with my family. Oh yeah and I love absolutely love to sleep and get peace and quite except I get none. You wanna get smart? Read…</p>
     </div>
     <div class="col-lg-12 col-md-12 col-sm-12 team">
-      <h3><span class="glyphicon glyphicon-screenshot" aria-hidden="true"></span> Charlie Brown</h3>
-      <p>Two years after high school our mom bought us our first Mac in 1995. I attempted to write my first HTML page and failed. 23 years later I’m developing web application software well beyond mywebpage.html. After graduating from college with an engineering degree I ventured into NYC and worked for some of the top recording studios. My web dreams weren’t as strong. But I had a tremendous background and knowledge of ripping computers apart and putting them back together even better. I used that skill a long time in many different IT positions. Landing an A+ cert doing tech support around the country. I chased a passion a for music but an even a deeper passion for the web. I got more technical and attained several positions implementing big data distributed systems as a Certified SAP Business Objects Architect in several software packages. I served Fortune 500 company's enterprise applications that sprung from canned solutions technology. After a small stint in the corporate world I decided to follow my dream and become a web developer. I went to a coding bootcamp, already having coded on my own for 1 year. I did the cohort for the polish. Know that I hope to put that polish on your project. I love Skyping with my daughter, a late night run; cooking to me is therapeutic, meditating, and hanging out with my family. Oh yeah and I love absolutely love to sleep and get peace and quite except I get none. You wanna get smart? Read…</p>
+      <h3 style="font-family: 'Bungee Shade', serif; font-weight: bold;"><span class="glyphicon glyphicon-screenshot" aria-hidden="true"></span> Grant Fraser</h3>
+        <p>I have been learning programming and coding for over half a year now. I first started learning Python and was overwhelmed by the possibilities that I could achieve. I began to research more and more about software and web design. I decided to slow down and begin with mastering web design. I want to be able to see the full picture- how computers work, inside and out. I am slowly learning everything from web development to computer security and software development including mobile applications and desktop applications. I have high hopes and ambitions for the future, and am spending all of my spare time after work and on the weekends, learning more information on coding and programming. Recently I have been focused on mastering my HTML and CSS skills, especially Bootstrap. More recently I have been focused on learning Javscript and jQuery. I am continuing to learn more every day and see a lot of potential in Javascript- a language I once never even knew and now I can do things I would have never thought I would be able to do. Becoming a professional web and software developer has become my passion and goal in my life. It keeps me feeling alive and there is nothing better than exercising the mind. Once I feel comfortable with my skills I plan on diving into the MERN stack type ideology using either Postgres or Mongo DB with Express, React, and Node. The power of Javascript is certainly amazing and it all boils down to true or false- this or that- 0 or 1. Simple choices and decisions that decide the fate of the future, that we all make collectively.</p>
     </div>
     <div class="col-lg-12 col-md-12 col-sm-12 team">
-      <h3><span class="glyphicon glyphicon-screenshot" aria-hidden="true"></span> Grant Fraser</h3>
-      <p>Lorem ipsum Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, error, itaque non vel architecto ratione obcaecati doloribus delectus illum harum? Lorem ipsum dolor sit amet, consectetur adipisicin dolor sit amet, consectetur adipisicing elit. Quasi, error, itaque non vel architecto ratione obcaecati doloribus delectus illum harum? Lorem ipsum dolor sit amet, consectetur adipisicin Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, error, itaque non vel architecto ratione obcaecati doloribus delectus illum harum? Lorem ipsum dolor sit amet, consectetur adipisicin Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, error, itaque non vel architecto ratione obcaecati doloribus delectus illum harum? Lorem ipsum dolor sit amet, consectetur adipisicinLorem ipsum dolot, consectetur adipisicing elit. Quasi, error, itaque non vel architecto ratione obcaecati doloribus delectus illum harum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, error, itaque non vel architecto ratione obcaecati doloribus delectus illum harum?</p>
-    </div>
-    <div class="col-lg-12 col-md-12 col-sm-12 team">
-      <h3><span class="glyphicon glyphicon-screenshot" aria-hidden="true"></span> Ankur Sharma</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, error, itaque non vel archLorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, error, itaque non vel architecto ratione obcaecati doloribus delectus illum harum? Lorem ipsum dolor sit amet, consectetur adipisicinitecto ratione obcaecati doloribus delectus illum harum? Lorem ipsum dolor sit amet, consectetur adipisicin Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, error, itaque non vel architecto ratione obcaecati doloribus delectus illum harum? Lorem ipsum dolor sit amet, consectetur adipisicinLorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, error, itaque non vel architecto ratione obcaecati doloribus delectus illum harum? Lorem ipsum dolor sit amet, consectetur adipisicinipsum dolor sit amet, consectetur adipisicing elit. Quasi, error, itaque non vel architecto ratione obcaecati doloribus delectus illum harum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, nam voluptate accusantium nulla distinctio odit aliquam voluptatem ab. Earum, voluptatibus.</p>
+      <h3 style="font-family: 'Bungee Shade', serif; font-weight: bold;"><span class="glyphicon glyphicon-screenshot" aria-hidden="true"></span> Ankur Sharma</h3>
+        <p>I am full stack js developer -MERN stack. Complete family guy, love my parents,sister and wife. I am more of a business person than coder. I launched couple of softwares generated small amount of money like $30k per project. Which is good money according to Iindian stndards and considering, I invested $600 in it. Later I sold it to canadian and Australian companies. I had no coding skills and both of projects went downhill after my lead coder left the project. Thats when i realised I need to learn coding if i want to make it big. Ii am itching to create and launch my next idea and generate half a million dollars. But , right now i am completely broke and thats why sometime i feel I should get a side job.</p>
     </div>
   </div>
 </div>
 
-<!--Carousel--> 
-<div class="jumbotron" style="border-radius: 15px; background: rgba(222, 244, 223, .5);">
-<div class="container">
-  <div id="Carousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#Carousel" data-slide-to="0" class="active"></li>
-      <li data-target="#Carousel" data-slide-to="1"></li>
-      <li data-target="#Carousel" data-slide-to="2"></li>
-    </ol>
+<!--/Team-->
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-
-      <div class="item active">
-        <img src="https://www.teachermagazine.com.au/files/Computing%2C_programming_and_coding_in_schools.jpg" alt="" style="width:100%;">
-        <div class="carousel-caption">
-          <h3></h3>
-          <p></p>
-        </div>
-      </div>
-
-      <div class="item">
-        <img src="http://www.aprameya.net/images/darkbluematrix.jpg" alt="" style="width:100%;">
-        <div class="carousel-caption">
-          <h3></h3>
-          <p></p>
-        </div>
-      </div>
-    
-      <div class="item">
-        <img src="https://warroom.securestate.com/wp-content/uploads/2016/10/coding.jpg" alt="" style="width:100%;">
-        <div class="carousel-caption">
-          <h3></h3>
-          <p></p>
-        </div>
-      </div>
-  
-    </div>
-    
-    <a class="left carousel-control" href="#Carousel" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#Carousel" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-      <span class="sr-only">Next</span>
-      
-    </a>
-  </div>
- </div>
-</div>
-<!--End Carousel-->
-</div>
 
 <!--About Us-->
-    <div class="col-lg-12 col-sm-12" id="middle">
+  <div class="text-vertical-center about">
+    <div class="container-fluid" id="middle">
     <div id="aboutSection">
-      <h2 class="text-center" id="about"><u>About Us</u></h2>
+      <h2 class="text-center" id="about" style="font-weight: bold;
+  font-size: 42px;"><strong><u><em>About Us</em></u></strong></h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, voluptates, soluta velit nostrum ut iste exercitationem vitae ipsum repellendus laudantium ab possimus nemo odio cumque illum nulla laborum blanditiis unde.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, voluptates, soluta velit nostrum ut iste exercitationem vitae ipsum repellendus laudantium ab possimus nemo odio cumque illum nulla laborum blanditiis unde.icing elit. Quasi, error, itaque non vel architecto ratione obcaecati doloribus delectus illum harum? Lorem ipsum dolor sit amet, consectetur adipisicin Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, error, itaque non vel architecto ratione obcaecati doloribus delectus illum harum? Lorem ipsum dolor sit amet, consectetur adipisicin Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, error, itaque non vel architecto ratione obcaecati doloribus delectus illum harum? Lorem ipsum dolor sit amet, consectetur adipisicinLorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, error, itaque non vel architecto ratione obcaecati doloribus delectus illum harum? Lorem ipsum dolor sit amet, consectetur adipisicin Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, error, itaque non vel architecto ratione obcaecati doloribus delectus illum harum? Lorem ipsum dolor sit amet, consectetur adipisicing eliticing elit. Quasi, error, itaque non vel architecto ratione obcaecati doloribus delectus illum harum? Lorem ipsum dolor sit amet, consectetur adipisicin Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, error, itaque non vel architecto ratione obcaecati doloribus delectus illum harum? Lorem ipsum dolor sit amet, consectetur adipisicin Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, error, itaque non vel architecto ratione obcaecati doloribus delectus illum harum? Lorem ipsum dolor sit amet, consectetur adipisicinLorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, error, itaque non vel architecto ratione obcaecati doloribus delectus illum harum? Lorem ipsum dolor sit amet, consectetur adipisicin Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, error, itaque non vel architecto ratione obcaecati doloribus delectus illum harum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. icing elit. Quasi, error, itaque non vel architecto ratione obcaecati doloribus delectus illum harum? Lorem ipsum dolor sit amet, consectetur adipisicin Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, error, itaque non vel architecto ratione obcaecati doloribus delectus illum harum? Lorem ipsum dolor sit amet, consectetur adipisicin Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, error, itaque non vel architecto ratione obcaecati doloribus delectus illum harum? Lorem ipsum dolor sit amet, consectetur adipisicinLorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, error, itaque non vel architecto ratione obcaecati doloribus delectus illum harum? Lorem ipsum dolor sit amet, consectetur adipisicin Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, error, itaque non vel architecto ratione obcaecati doloribus delectus illum harum? Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, voluptates, soluta velit nostrum ut iste exercitationem vitae ipsum repellendus laudantium ab possimus nemo odio cumque illum nulla laborum blanditiis unde.icing elit. Quasi, error, itaque non vel architecto ratione obcaecati doloribus delectus illum harum? Lorem ipsum dolor sit amet, consectetur adipisicin Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, error, itaque non vel architecto ratione obcaecati doloribus delectus illum harum? Lorem ipsum dolor sit amet, consectetur adipisicin Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, error, itaque non vel architectoasi, error, itaque non vel architecto ratione obcaecati doloribus delectus illum harum? Lorem ipsum dolor sit amet, consectetur adipisicin Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, error, itaque non vel architecto ratione obcaecati doloribus delectus illum harum? Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
       </div>
     </div>
   </div>
+
+<!--/About Us-->
+
+
+<!--EXTRAS-->
+<div class="container-fluid bg-warning" id="extras" >
+  <h2  style="font-family: 'Bungee Shade', serif; font-size: 50px;" class="text-center bg-danger">EXTRAS</h2>
+  <div class="row-fluid">
+    
+    <div class="text-center col-sm-6">
+      <h3 class="text-center bg-danger">
+        <i class="fa fa-spin fa-cog fa-3x" aria-hidden="true"></i>
+      </h3>
+      <a class="btn btn-info btn-lg center-block under-construction" href="#" role="button">Under Construction</a></div>
+      
+       
+    <div class="text-center col-sm-6">
+      <h3 class="text-center bg-danger">
+        <i class="fa fa-spin fa-cog fa-3x" aria-hidden="true"></i>
+      </h3>
+      <a class="btn btn-info btn-lg center-block under-construction" href="#" role="button">Under Construction</a></div>
+
+    <div class="text-center col-sm-6">
+      <h3 class="text-center bg-danger">
+        <i class="fa fa-spin fa-cog fa-3x" aria-hidden="true"></i>
+      </h3>
+      <a class="btn btn-info btn-lg center-block under-construction" href="#" role="button">Under Construction</a></div>
+
+    <div class="text-center col-sm-6">
+      <h3 class="text-center bg-danger">
+        <i class="fa fa-spin fa-cog fa-3x" aria-hidden="true"></i>
+      </h3>
+      <a class="btn btn-info btn-lg center-block under-construction" href="#" role="button">Under Construction</a></div>
+
+    <div class="text-center col-sm-6">
+      <h3 class="text-center bg-danger">
+        <i class="fa fa-spin fa-cog fa-3x" aria-hidden="true"></i>
+      </h3>
+      <a class="btn btn-info btn-lg center-block under-construction" href="#" role="button">Under Construction</a></div>
+
+    <div class="text-center col-sm-6">
+      <h3 class="text-center bg-danger">
+        <i class="fa fa-spin fa-cog fa-3x" aria-hidden="true"></i>
+      </h3>
+      <a class="btn btn-info btn-lg center-block under-construction" href="#" role="button">Under Construction</a></div>
+
+  </div>
 </div>
 
+<!--/EXTRAS-->
+
+
 <!--Contact Us-->       
-<hr>
-<div class="container">
-<div class="col-lg-12 col-md-12 col-sm-12" id='bottom'>
-      <h2 class="text-center" id="contact"><u>Contact Us</u></h2>
-      <address class= "text-center">
-      <strong>Team <em>3X DESIGN</em>, Inc.</strong><br>
-      Sunny Springs Plaza, Grand Tripelles,<br>
-      CA, 91308-4075, US<br>
+<div class="container-fluid" id="bottom">
+  <h2 class="text-center" id="contact"><strong><em><u>CONTACT US</u></em></strong></h2>
+    <address class= "text-center">
+      <strong>Team <em>3X DESIGN</em>, Inc.</strong>
+        <br>
+    Sunny Springs Plaza, Grand Tripelles,
+        <br>
+    CA, 91308-4075, US
+        <br>
       <abbr title="Phone">t:</abbr> (123) 456-7890
-      <abbr title="Email">3xdesign@3xdesign.com</abbr>
-      </address>
+        <br>
+      <abbr title="Email">team3xdesign@team3x.gq</abbr>
+    </address>
 <hr>
+
         <div>
-      <h3 class= "text-center">Or feel free to send us a message!</h3>
            <form id="contactForm" novalidate="">
         <div class="form-item text-center">
-          <label for="“name”">Name:</label>
-          <input id="name" type="text" placeholder="Full Name" required="">
+          <label for="“name”">Full Name:
+            <input id="name" type="text" placeholder="Full Name" required="">
+          </label>
         </div>
         <div class="form-item text-center">
-          <label for="“email”">Email Address:</label>
-          <input id="email" type="email" placeholder="Email Address" required="">
+          <label for="“email”">Email Address:
+            <input id="email" type="email" placeholder="Email Address" required="">
+          </label>
         </div>
         <div class="form-item text-center">
-          <label for="“phone”">Phone Number:</label>
-          <input id="phone" type="tel" placeholder="Phone Number" required="">
+          <label for="“phone”">Phone Number:
+            <input id="phone" type="tel" placeholder="Phone Number" required="">
+          </label>
         </div>
         <div class="form-item text-center">
-          <label for="“message”">Message:</label>
-          <textarea id="message" rows="1" col="16" placeholder="Message" required=""></textarea>
-        </div><br>
+          <label for="“message”">Message:
+            <textarea id="message" rows="6" col="16" placeholder="Message" required=""></textarea>
+          </label>
+        </div>
+
         <button type="submit" class="btn btn-block btn-primary">Send</button>
       </form>
         </div>
 
+<!--/Contact Us--> 
+
+
 <!--Social Media-->
-    <div id=socialCenter">
-      <h2 class="text-center"><em><strong>Social Media</strong><em></h2>
+    <div id="socialCenter">
       <hr>
       <div class="row">
+
         <div class="col-xs-2">
-        <a href="#">
-          <span class="fa fa-twitter fa-5x" style="color:white;"></span>
+          <a href="#">
+            <span class="fa fa-twitter fa-5x" style="color:white;"></span>
           </a>
-          </div>
+        </div>
+
         <div class="col-xs-2">
-         <a href="https://github.com/cdbBinary/jam-stack-portfolio" style="color:white;">
-          <span class="fa fa-github fa-5x"></span>
+          <a href="https://github.com/Team3x" style="color:white;">
+            <span class="fa fa-github fa-5x"></span>
           </a>
-          </div>
+        </div>
+
         <div class="col-xs-2">
-         <a href="#">
-          <span class="fa fa-facebook fa-5x" style="color:white;"></span>
+          <a href="#">
+            <span class="fa fa-facebook fa-5x" style="color:white;"></span>
           </a>
-          </div>
+        </div>
+
         <div class="col-xs-2">
-         <a href="https://www.google.com">
-          <span class="fa fa-google-plus-square fa-5x" style="color:white;"></span>
+          <a href="https://www.google.com">
+            <span class="fa fa-google-plus-square fa-5x" style="color:white;"></span>
           </a>
-          </div>
-          <div class="col-xs-2">
-         <a href=#>
-          <span class="fa fa-youtube fa-5x" style="color:white;"></span>
+        </div>
+
+        <div class="col-xs-2">
+          <a href=#>
+            <span class="fa fa-youtube fa-5x" style="color:white;"></span>
           </a>
-          </div>
-          <div class="col-xs-2">
-         <a href=#>
-          <span class="fa fa-linkedin fa-5x" style="color:white;"></span>
+        </div>
+
+        <div class="col-xs-2">
+          <a href=#>
+            <span class="fa fa-linkedin fa-5x" style="color:white;"></span>
           </a>
-          </div>      
+        </div>    
+
       </div>
     </div>
- </div>
+    <hr>
+  </div>
  <hr>
 <!--End Social Media-->
 
 
+<!--Footer-->
 <footer class="text-center">
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-
-      <br>
-
         <p>Copyright © Team 3X. All rights reserved.</p>
       </div>
     </div>
   </div>
-</div>
-</div>
-</div>
-</div>
 </footer>
 
+<!--/Footer-->
 
-<!--Script-->
-<script type="text/javascript" src="js/script.js"></script>
+
+
 
 <!--jQuery-->
-<script
+ <!--
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+-->
+  <script
   src="https://code.jquery.com/jquery-3.2.1.js"
   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
   crossorigin="anonymous"></script>
 
-<!--JS Bootstrap- Necessary to be after jQuery for Carousel in order to work properly. Not sure why.-->
+  <!--JS Bootstrap-->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!--jQuery-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--Script-->
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/jqscript.js"></script>
+
+
+
 
 </body>
 </html>
