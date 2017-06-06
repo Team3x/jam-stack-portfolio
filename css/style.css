@@ -1,156 +1,316 @@
-h1{
-  text-align: center;
-}
-
-#signupForm {
-      background:rgba(222, 244, 223, .5);
-      border-radius:  25px;
-      width:auto;
-      height:auto;
-      padding:1em;
-}
-
-#loginForm {
-      background:rgba(222, 244, 223, .5);
-      border-radius:  25px;
-      width:auto;
-      height:auto;
-      padding:1em;
-}
-
-#top {
-    background-image: url(https://static.pexels.com/photos/25521/pexels-photo-25521.jpg);
-    background-repeat: no-repeat;
-    background-size:cover;
-    border-radius: 15px;
-    z-index: 1;
-}
-
-#middle {
-    background-image:url(https://static.pexels.com/photos/286076/pexels-photo-286076.jpeg);
-    background-repeat: no-repeat;
-    background-size:cover;
-    border-radius: 25px;
-    margin-bottom: 1em;
-}
-
-#aboutSection {
-  margin: 2em 2em;
-  background: rgba(222, 244, 223, .5);
-  border-radius: 15px;
-  padding: 2em;
-}
-
-#bottom {
-    background-image: url(http://2.bp.blogspot.com/-bj1_grGf7_Q/Uj73xuJ7iaI/AAAAAAAAF2c/HGqX5aUOVjQ/s1600/bg.jpg);
-    background-repeat: no-repeat;
-    background-size:cover;
-    border-radius: 15px;
-    padding: 2em;
-    z-index: 1;
-}
-
-body#main {
-  background-image:url(https://zellox.com/wp-content/uploads/2016/02/background-site.jpg);
-}
-
-body {
-    font-family: "Lato", sans-serif;
-    transition: background-color .5s;
-}
-
-#jt {
-  border-radius: 25px;
-  margin:1em;
-  background:rgba(209, 255, 246,.5);
-}
-
-#socialCenter span {
-  float:center;
-  color: white;
-}
-  #socialCenter {
-  color: white;
-}
-
-.team {
-  border: solid 1px grey;
-}
-
-.item {
-  margin: auto;
-}
-
-/*NAV BAR*/
+/*===================//
+/* NAV BAR
+//==================/*/
 span#menuBar {
-    z-index: 2;
-    position: fixed;
-    font-size:30px;
-    cursor:pointer;
-    text-align: center;
-    color: white;
-    width:40px;
-    background:rgba(39, 39, 40, .3);
-    border-radius: 15px;
-    left:0;
-    margin-left: 5px;
+  z-index: 2;
+  position: fixed;
+  font-size:30px;
+  cursor:pointer;
+  text-align: center;
+  color: white;
+  width:40px;
+  background:rgba(39, 39, 40, .3);
+  left:0;
+  margin-top: 10px;
+  margin-left: 5px;
 }
-
 #mySidenav {
   position:fixed;
 }
 .sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgba(17, 17, 17, .85);
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(17, 17, 17, .85);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
 }
-
 .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
 }
-
 .sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
+  color: #f1f1f1;
 }
-
 .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
 }
-
 #main {
-    transition: margin-left .5s;
-    padding: 16px;
+  transition: margin-left .5s;
+  padding: 16px;
 }
-
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
-/*NAV BAR*/
+/*===================//
+/* NAV BAR
+//==================/*/
 
-#up{
+/*===================//
+/* Custom Button Styles
+//==================/*/
+.btn-dark {
+    border-radius: 0 !important;
+    color: #fff;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-dark:active {
+    color: #fff;
+    background-color: rgba(255,255,2552,0.4);
+}
+
+.btn-light {
+    border-radius: 0 !important;
+    color: #333;
+    background-color: rgb(255,255,255);
+}
+
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active {
+    color: #333;
+    background-color: rgba(255,255,255,0.8);
+}
+/*===================//
+/* Custom Button Styles
+//==================/*/
+
+*{
+  margin: 0;
+}
+input#username, 
+input#password,
+input#firstName, 
+input#lastName,
+input#email, 
+input#password,
+input#confirm_password{
+  color:black;
+}
+html, body {
+  overflow-x: hidden;
+}
+html,body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  font-family: 'Anton', sans-serif;
+  transition: background-color .5s;
+  margin:0;
+}
+h1{
+  text-align: center;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  display:none;
+}
+h2{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+}
+.text-center{
+  background: rgba(255,255,255,.5)
+}
+#description {
+  padding:1em;
+  height: 300px;
+  width:100%;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  background-color:rgba(0,0,0,0.05);
+  border: 1px solid grey;
+}
+#signupForm {
+  width:auto;
+  height:auto;
+  padding:2em;
+  padding-right: 4em;
+  padding-left: 4em;
+  letter-spacing: .1em;
+  line-height: 1em;
+  border: 1px solid grey;
+}
+label, 
+input {
+  display: inline;
+}
+label {
+  margin: 1em;
+}
+#loginForm {
+  width:auto;
+  height:auto;
+  padding:2em;
+}
+.login {
+  border: 1px solid grey;
+  padding:2em;
+}
+#services,
+#extras {
+  padding:2em;
+  border: 1px solid grey;
+}
+.btn.btn-info.btn-lg.center-block:hover {
+  background: lightgreen;
+  }
+.btn.btn-info.btn-lg.center-block.under-construction:hover {
+  background: red;
+}
+.about {
+  background-image:url(../images/riverside_city.jpeg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  height:100%;
+  width:100%;
+  padding: 2em;
+  margin:auto;
+  display: table;
+  position: relative;
+  border: 1px solid grey;
+}
+#aboutSection {
+  background: rgba(222, 244, 223, .7);
+  padding: 2em;
+  margin:3em;
+}
+#bottom {
+  background-image: url(../images/ocean.jpg); 
+  background-repeat: no-repeat;
+  background-size:cover;
+  padding: 2em;
+  width: 100%;
+  height:100%;
+  margin:auto;
+  display: table;
+  position: relative;
+  border: 1px solid grey;
+}
+#socialCenter span {
+  float:center;
+  color: white;
+}
+  #contact {
+  color: white;
+  font-weight: bold;
+  font-size: 42px;
+}
+.team {
+  border: solid 1px white;
+  width:auto;
+  height:auto;
+}
+#team {
+  padding:1em;
+  text-align: center;
+  border: 1px solid grey;
+}
+div.container-fluid {
+  bottom: 0;
+  margin-bottom: 0
+}
+.learnMore {
+  bottom:0;
+  margin-bottom: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin:auto;
+}
+.hacker {
+  opacity:.8;
+}
+#hackerBg {
+  background-image: url(../images/psych-black-white.jpg);
+  background-size: cover;
+  opacity:.4;
+  border: 1px solid grey;
+}
+.random {
+  padding:2em;
+  display: table;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.header{
+  display: table;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url(../images/central_park.jpg) 
+    no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  border: 1px solid grey;
+  }
+.text-vertical-center {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+.text-vertical-center h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 4.5em;
+  font-weight: 700;
+  }
+h3#description.text-center{
+  margin:0;
+}
+
+/*===================//
+/*CAROUSELS
+//==================/*/
+#carousel_1_wrapper {
+  background-image:url(../images/code.jpg);
+  background-size: cover;
+  opacity: 0.8;
+  z-index: 1;
+  border: 1px solid grey;
+}
+.carousel_1 {
+  max-width:60%;
+  margin:auto;
+  z-index: 2;
+  opacity:1;
+}
+.item {
+  margin: auto;
+}
+/*===================//
+/*CAROUSELS
+//==================/*/
+
+/*===================//
+/*UP BUTTON
+/*==================/*/
+#up {
   right:0;
   bottom:0;
-  margin-right: 10px;
-  margin-bottom:5px;
-  background:rgba(39, 39, 40, .3);
-  border-radius: 15px;
+  margin-right: 20px;
+  margin-bottom:10px;
   cursor:pointer;
   text-align: center;
   color: white;
@@ -158,22 +318,10 @@ span#menuBar {
   position:fixed;
   z-index:2;
 }
-
 i.fa.fa-arrow-up {
   color:white;
+  background: rgba(39, 39, 40, .3);
 }
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin:auto;
-}
-
-.hacker {
-  margin:2em;
-}
-
-#team {
-  text-align: center;
-}
+/*===================//
+/*UP BUTTON
+/*==================/*/
