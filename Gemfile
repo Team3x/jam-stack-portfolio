@@ -15,6 +15,7 @@ gem 'mini_magick'
 gem 'fog'
 gem 'faker'
 gem 'carrierwave'
+gem 'webpacker', '~> 2.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.1'
